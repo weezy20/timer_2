@@ -1,0 +1,59 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Tourney", sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #264653;
+    color: #ffb703;
+}
+
+#usr-input {
+    display: flex;
+    justify-content: stretch;
+    font-size: 2em;
+    align-items: center;
+}
+input#timer {
+    font-size: 1.2em;
+    min-width: 5em;
+}
+div#usr-input label {
+    margin-right: 30px;
+    font-family: Verdana;
+}
+
+#timer-container p {
+    text-align: center;
+    font-size: 8em;
+    margin: 0;
+}
+
+button {
+    font-family: inherit;
+    min-width: 10em;
+    min-height: 5em;
+    color: #faed27;
+    background: none;
+    padding: 1em 2.3em;
+    font-size: 1em;
+    border: 2px solid #ffa260;
+    transition: color 0.16s, box-shadow 0.16s, border-color 0.16s, transform 0.16s;
+    transition-timing-function: ease-in;
+}
+
+button:hover {
+    border-color: #f1ff5c;
+    color: white;
+    box-shadow: 0 .5em .5em -.4em #f1ff5c;
+    transform: translateY(-0.16em);
+    cursor: pointer ;
+}
