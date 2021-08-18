@@ -1,22 +1,22 @@
 const body = document.body;
 const timer = document.getElementById('timer');
-const time = timer.value;
 const clock = document.querySelector("#timer-container p");
 
 const btn = document.getElementById('start');
-btn.addEventListener("click", createTimer);
+btn.addEventListener("click", createTimer, { once: true });
 
 function createTimer() {
+    const time = Number(timer.value);
     btn.textContent = "START";
-    // btn.style.borderRadius = "0.7em";
-    let _time = time < 10 ? '0' + time : time;
-    clock.textContent = `${_time}::00`;
-    btn.removeEventListener("click", createTimer);
-    btn.addEventListener("click", startTimer, { once: true });
+    btn.style.borderRadius = "0.7em";
+    // Weird JS can compare strings to numbers so this step works without the Number coercion as well
+    let t = time < 10 ? '0' + time : time;
+    clock.textContent = `${t}::00`;
+    btn.addEventListener("click", (evt) => startTimer(time, evt), { once: true });
 }
 
-function startTimer() {
-    btn.innerText = "Pause";
+function startTimer(time, evt) {
+    btn.innerText = "Pause"; // todo!()
     let seconds = 60 * time;
     let start_timer = setInterval(() => {
         // Update text of clock
