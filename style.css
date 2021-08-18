@@ -22,19 +22,33 @@ body {
     font-size: 2em;
     align-items: center;
 }
-input#timer {
+input#timer{
     font-size: 1.2em;
     min-width: 5em;
+    border: solid #faed27 3px;
+    border-radius: 1.25em;
+    transition: all 50ms ease-in; 
+    color: #457b9d;
+    text-align: center;
+    height: 52px;
 }
+input#timer:focus {
+    outline: none;
+    border: solid #e9c46a 5px;
+}
+
 div#usr-input label {
     margin-right: 30px;
     font-family: Verdana;
 }
-
+#timer-container {
+    width : 369px;
+}
 #timer-container p {
     text-align: center;
     font-size: 8em;
     margin: 0;
+
 }
 
 button {
