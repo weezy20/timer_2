@@ -1,4 +1,8 @@
-
+/* @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap'); */
+@font-face {
+    font-family: digital;
+    src: url("Digital7Mono-B1g5.ttf");
+}
 * {
     box-sizing: border-box;
 }
@@ -39,12 +43,12 @@ input#timer:focus {
 
 div#usr-input label {
     margin-right: 30px;
-    font-family: Verdana;
 }
 #timer-container {
     width : 369px;
 }
 #timer-container p {
+    font-family: digital;
     text-align: center;
     font-size: 8em;
     margin: 0;
