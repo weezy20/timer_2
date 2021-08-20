@@ -13,6 +13,9 @@ function createTimer() {
     btn.textContent = "START";
     btn.style.borderRadius = "2em";
     btn.style.backgroundColor = "#522b29A0";
+    if (clock.classList.contains('tourney')) {
+        clock.classList.toggle('tourney');
+    }
     // Weird JS can compare strings to numbers so this step works without the Number coercion as well
     let t = time < 10 ? '0' + time : time;
     clock.textContent = `${t}::00`;
@@ -42,6 +45,7 @@ function startTimer(time, evt) {
             seconds--;
             if (seconds == 0) {
                 clearInterval(start_timer);
+                clock.classList.toggle('tourney');
                 clock.innerText = "TIME'S UP!";
                 btn.style.backgroundColor = "none";
                 btn.borderRadius = "none";

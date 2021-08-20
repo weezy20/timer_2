@@ -19,6 +19,9 @@ body {
     background-color: #264653;
     color: #ffb703;
 }
+.tourney {
+    font-family: 'Tourney';
+}
 
 #usr-input {
     display: flex;
